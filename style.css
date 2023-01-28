@@ -78,17 +78,6 @@ svg {
   fill: currentColor;
 }
 
-/*FONTS*/
-/* Configuramos la tipografía para toda la web */
-body {
-  margin: 0 auto;
-  min-height: 100vh;
-  font-size: 100%;
-  max-width: 1440px;
-  background: white;
-  font-family: Verdana;
-}
-
 /*
 <body>
 <div class="container">
@@ -106,8 +95,21 @@ body {
 </body>
 
 */
+@font-face {
+  font-family: "Montserrat";
+  src: url("/MWD/SESION 6/Chuck norris/assets/Montserrat/static/Montserrat-Medium.ttf");
+}
+body {
+  margin: 0 auto;
+  min-height: 100vh;
+  font-size: 100%;
+  max-width: 1440px;
+  background: white;
+  font-family: "Montserrat", sans-serif;
+}
+
 .container {
-  margin: 50px auto;
+  margin: 20px;
   width: 95%;
   display: flex;
   flex-flow: column nowrap;
@@ -121,7 +123,7 @@ body {
   background-color: #FFD0B3;
   color: #EF631A;
   padding: 25px 10px;
-  margin: 50px 0 25px 0;
+  margin: 15px 0 0 0;
   align-self: auto;
   max-width: 350px;
   text-align: center;
@@ -129,11 +131,12 @@ body {
 .container__text {
   color: #000000;
   font-size: 18px;
-  margin: 25px 0 50px 0;
+  margin: 15px 0 15px 0;
+  padding: 25px 10px;
   text-align: center;
 }
 .container__box {
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -147,7 +150,7 @@ body {
   font-size: 18px;
   margin: 5px;
   border: 1px solid #A0A0A0;
-  padding: 5px;
+  padding: 20px;
 }
 .container__btn--select {
   color: #000000;
@@ -155,7 +158,7 @@ body {
   margin: 5px;
   border: 1px solid #EF631A;
   background-color: #FFD0B3;
-  padding: 10px;
+  padding: 20px;
 }
 .container__basic-btn {
   display: flex;
@@ -203,4 +206,97 @@ body {
 .joke__img {
   width: 240px;
   margin: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-content: center;
+  }
+  .container {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .container__box {
+    width: 100%;
+  }
+  .container__title {
+    font-size: 24px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: initial;
+  }
+  .container__btn {
+    width: 40%;
+    padding: 20px;
+    font-size: 18px;
+    margin: 5px 10px;
+  }
+  .joke {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  body {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-content: center;
+  }
+  .container {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .container__box {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .container__title {
+    font-size: 24px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: initial;
+  }
+  .container__btn {
+    width: 30%;
+    padding: 20px;
+    font-size: 18px;
+    margin: 5px 10px;
+  }
+  .joke {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  body {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-content: center;
+  }
+  .container {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .container__box {
+    width: 100%;
+    justify-content: center;
+  }
+  .container__title {
+    font-size: 24px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: initial;
+  }
+  .container__btn {
+    width: 20%;
+    padding: 20px;
+    font-size: 18px;
+    margin: 5px 10px;
+  }
+  .joke {
+    width: 350px;
+  }
 }/*# sourceMappingURL=style.css.map */
