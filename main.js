@@ -79,13 +79,13 @@ function anadirCategoria(categorie, index) {
 }
 
 function enviarCategories() {
-    let url1 = urlCategorie ;
+    let url1 = (categoriesSelected === []) ? urlAleatorie : urlCategorie ;
     console.log(url1);
     
-        fetch(url1)
-        .then(respuesta => respuesta.json())
-        .then(respuesta => joke.textContent = respuesta.value)
-        .catch(error => console.log(error))
+    fetch(url1)
+    .then(respuesta => respuesta.json())
+    .then(respuesta => joke.textContent = respuesta.value)
+    .catch(error => console.log(error))
     }
    
 
