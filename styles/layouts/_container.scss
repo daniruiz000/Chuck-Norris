@@ -26,6 +26,7 @@
     align-items: center;
     &__title{
         font-size: 20px;
+        font-weight: bold;
         width: 95%;
         background-color: #FFD0B3;
         color: #EF631A;
@@ -51,13 +52,17 @@
         align-items: center;
     }
     &__btn{
-        font-size: 18px;
-        margin: 5px;
-    }
-    &__btn--select{
+        color: #A0A0A0;
         font-size: 18px;
         margin: 5px;
         border: 1px solid #A0A0A0;
+        padding: 5px;
+    }
+    &__btn--select{
+        color: #000000;
+        font-size: 18px;
+        margin: 5px;
+        border: 1px solid #EF631A;
         background-color:#FFD0B3;
         padding: 5px;
     }
@@ -69,6 +74,16 @@
         align-items: center;
         align-content: center;
     }
+    &__btn-send{
+        background-color: #FFD0B3;
+        color: #ffffff;
+        border: none;
+    }
+    &__btn-reset{
+        background-color: #FFF8F4;
+        color: #FFD0B3;
+        border: none;
+    }
 }
 
 .joke{
@@ -78,9 +93,14 @@
     align-content: center;
     justify-content: center;
     align-items: center;
-
+    &__text{
+        font-size: 20px;
+        color: #EF631A;
+        padding: 10px;
+        text-align: center;
+    }
     &__img{
-        width: 200px;
+        width: 240px;
     }
 }
 
