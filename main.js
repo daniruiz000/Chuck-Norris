@@ -95,7 +95,7 @@ const enviarCategories = async () => {
     fetch(url)
     .then(respuesta => respuesta.json())
     .then(respuesta => {
-        joke.textContent = respuesta.value;
+        joke.textContent = '"'+respuesta.value+'"';
     })
     .catch(error => console.log(error)) 
 }
@@ -115,7 +115,7 @@ function jokeAleatorie() {
     fetch()
     .then(respuesta => respuesta.json())
     .then(respuesta => {
-        joke.textContent = respuesta.value;
+        joke.textContent = '"'+respuesta.value+'"';
     })
     .catch(error => console.log(error)) 
 }

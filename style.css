@@ -236,6 +236,7 @@ body {
   }
   .joke {
     width: 350px;
+    justify-content: flex-start;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
@@ -267,6 +268,7 @@ body {
   }
   .joke {
     width: 350px;
+    justify-content: flex-start;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -298,5 +300,6 @@ body {
   }
   .joke {
     width: 350px;
+    justify-content: flex-start;
   }
 }/*# sourceMappingURL=style.css.map */
