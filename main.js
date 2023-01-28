@@ -14,7 +14,7 @@ let urlBasic = 'https://api.chucknorris.io/jokes/random?category=';
 let urlAleatorie = 'https://api.chucknorris.io/jokes/random?category=food,dev';
 let urlCategorie='';
 let categoriesSelected = [];
-
+let btnVariable;
 
 //Functions:
 
@@ -47,16 +47,18 @@ function pintarBtn(array) {
 
     array.forEach((element) => {
 
-        let button = document.createElement('button');
-        button.className = 'container__btn';
-        button.textContent = element;
-        container.appendChild(button);
-        button.addEventListener('click',function(){anadirCategoria(element)});
+        btnVariable = document.createElement('button');
+        btnVariable.className = 'container__btn';
+        btnVariable.textContent = element;
+        container.appendChild(btnVariable);
+        btnVariable.addEventListener('click',function(){anadirCategoria(element)});
 
     });
 }
 
 function anadirCategoria(categorie) {
+    btnVariable.classList.add('container__btn--select');
+    console.log(btnVariable);
     categoriesSelected.push(categorie);
     console.log(categoriesSelected);
     urlCategorie = urlBasic + categoriesSelected.toString();
@@ -86,6 +88,7 @@ function jokeAleatorie() {
     .then(respuesta => joke.textContent = respuesta.value)
     .catch(error => console.log(error)) 
 }
+
 
 
 //Calling functions:
