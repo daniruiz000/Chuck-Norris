@@ -120,7 +120,7 @@ body {
   width: 95%;
   background-color: #FFD0B3;
   color: #EF631A;
-  padding: 50px 20px;
+  padding: 25px 10px;
   margin: 50px 0 25px 0;
   align-self: auto;
   max-width: 350px;
@@ -133,7 +133,7 @@ body {
   text-align: center;
 }
 .container__box {
-  width: 70%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -142,6 +142,7 @@ body {
   align-items: center;
 }
 .container__btn {
+  width: 100%;
   color: #A0A0A0;
   font-size: 18px;
   margin: 5px;
@@ -154,7 +155,7 @@ body {
   margin: 5px;
   border: 1px solid #EF631A;
   background-color: #FFD0B3;
-  padding: 5px;
+  padding: 10px;
 }
 .container__basic-btn {
   display: flex;
@@ -162,13 +163,22 @@ body {
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
+  margin: 10px;
+  width: 100%;
+  justify-content: center;
 }
 .container__btn-send {
+  width: 40%;
+  margin: 5px;
+  padding: 10px;
   background-color: #FFD0B3;
   color: #ffffff;
   border: none;
 }
 .container__btn-reset {
+  width: 40%;
+  margin: 5px;
+  padding: 10px;
   background-color: #FFF8F4;
   color: #FFD0B3;
   border: none;
@@ -181,13 +191,16 @@ body {
   align-content: center;
   justify-content: center;
   align-items: center;
+  background-color: #FFD0B3;
 }
 .joke__text {
   font-size: 20px;
   color: #EF631A;
   padding: 10px;
+  margin: 10px;
   text-align: center;
 }
 .joke__img {
   width: 240px;
+  margin: 20px;
 }/*# sourceMappingURL=style.css.map */

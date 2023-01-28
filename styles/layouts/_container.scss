@@ -30,7 +30,7 @@
         width: 95%;
         background-color: #FFD0B3;
         color: #EF631A;
-        padding: 50px 20px;
+        padding: 25px 10px;
         margin: 50px 0 25px 0 ;
         align-self: auto;
         max-width: 350px;
@@ -43,7 +43,7 @@
         text-align: center;
     }
     &__box{
-        width: 70%;
+        width: 90%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -52,6 +52,7 @@
         align-items: center;
     }
     &__btn{
+        width: 100%;
         color: #A0A0A0;
         font-size: 18px;
         margin: 5px;
@@ -64,7 +65,7 @@
         margin: 5px;
         border: 1px solid #EF631A;
         background-color:#FFD0B3;
-        padding: 5px;
+        padding: 10px;
     }
 
     &__basic-btn{
@@ -73,13 +74,22 @@
         flex-wrap: wrap;
         align-items: center;
         align-content: center;
+        margin: 10px;
+        width: 100%;
+        justify-content: center;
     }
     &__btn-send{
+        width:40%;
+        margin: 5px;
+        padding: 10px;
         background-color: #FFD0B3;
         color: #ffffff;
         border: none;
     }
     &__btn-reset{
+        width:40%;
+        margin: 5px;
+        padding: 10px;
         background-color: #FFF8F4;
         color: #FFD0B3;
         border: none;
@@ -93,14 +103,17 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+    background-color: #FFD0B3;
     &__text{
         font-size: 20px;
         color: #EF631A;
         padding: 10px;
+        margin: 10px;
         text-align: center;
     }
     &__img{
         width: 240px;
+        margin: 20px;
     }
 }
 
@@ -113,3 +126,7 @@ $color4: #ffffff;
 $color5: #000000;
 $color6: #A0A0A0;
 $color7: #F5F5F5;
+
+@media screen and () {
+    
+}

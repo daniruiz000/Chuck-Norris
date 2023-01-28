@@ -1,3 +1,20 @@
+/*
+<body>
+<div class="container">
+    <h1 class="container__title">CHUCK NORRIS JOKES</h1>
+    <p class="container__text">Select the type of jokes you want:</p>
+    <div class="container__box">
+        <div class="container__basic-btn"></div>
+    </div>
+</div>    
+
+<div class="joke">
+    <img class="joke__img" src="./assets/chuck.png" alt="Chuck Norris img">
+    <p class="joke__text"></p>
+</div>
+</body>
+
+*/
 
 
 //Identification:
@@ -10,8 +27,8 @@ let joke = document.getElementsByClassName('joke__text')[0];
 //Variables:
 
 let url = 'https://api.chucknorris.io/jokes/categories';
-let urlBasic = 'https://api.chucknorris.io/jokes/random?category=';
-let urlAleatorie = 'https://api.chucknorris.io/jokes/random?category=food,dev';
+let urlBasic = 'https://api.chucknorris.io/jokes/random'; 
+let urlAleatorie = 'https://api.chucknorris.io/jokes/random?category=';
 let urlCategorie='';
 let categoriesSelected = [];
 let btnVariable;
@@ -23,16 +40,15 @@ function pintarBtnBasicos() {
     let btnNewJoke = document.createElement('button');
     let btnReset = document.createElement('button');
 
-    btnNewJoke.classList.add('container__btn-send','container__btn');
-    btnNewJoke.textContent = 'NEW JOKE';
-    btnDivBox.appendChild(btnNewJoke);
-
-    btnReset.classList.add('container__btn-reset','container__btn');
+    btnReset.classList.add('container__btn-reset');
     btnReset.textContent = 'RESET';
     btnDivBox.appendChild(btnReset);
-
-    btnReset.addEventListener('click', borrarCategories);
+    btnNewJoke.classList.add('container__btn-send');
+    btnNewJoke.textContent = 'NEW JOKE';
+    btnDivBox.appendChild(btnNewJoke);
     btnNewJoke.addEventListener('click', enviarCategories);
+    btnReset.addEventListener('click', borrarCategories);
+  
 }
 
 function btnCategory() {
@@ -60,46 +76,45 @@ function pintarBtn(array) {
 function anadirCategoria(categorie, index) {
     let btnSelect = document.getElementById(index);
     btnSelect.classList.add('container__btn--select');
-    console.log(categoriesSelected);
     
         if ( categoriesSelected.includes(categorie)){
             
             btnSelect.classList.remove('container__btn--select');
             let posArrayCtegr = categoriesSelected.indexOf(categorie);
             categoriesSelected.splice(posArrayCtegr,1);
-            console.log(categoriesSelected);
-        
-    
-        }else{ 
+        } else{ 
             categoriesSelected.push(categorie);
-            console.log(categoriesSelected);
-            urlCategorie = urlBasic + categoriesSelected.toString();
-            console.log(urlCategorie);
         }
+        urlCategorie = urlAleatorie + categoriesSelected.toString();
 }
 
-function enviarCategories() {
-    let url1 = (categoriesSelected === []) ? urlAleatorie : urlCategorie ;
-    console.log(url1);
+const enviarCategories = async () => {
+    const url = categoriesSelected.length === 0 ? urlBasic : urlCategorie
+    console.log(url)
     
-    fetch(url1)
+    fetch(url)
     .then(respuesta => respuesta.json())
-    .then(respuesta => joke.textContent = respuesta.value)
-    .catch(error => console.log(error))
-    }
+    .then(respuesta => {
+        joke.textContent = respuesta.value;
+    })
+    .catch(error => console.log(error)) 
+}
    
 
 
 function borrarCategories() {
     categoriesSelected = [];
     joke.textContent = '';
+    let btns = document.querySelectorAll('.container__btn');
+    btns.forEach(function(btn){
+        btn.classList.remove('container__btn--select');
+    });
 }
 
 function jokeAleatorie() {
-    fetch(urlAleatorie)
+    fetch()
     .then(respuesta => respuesta.json())
     .then(respuesta => {
-        console.log(respuesta);
         joke.textContent = respuesta.value;
     })
     .catch(error => console.log(error)) 
