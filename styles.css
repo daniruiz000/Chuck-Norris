@@ -1,0 +1,187 @@
+@charset "UTF-8";
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/*FONTS*/
+/* Configuramos la tipografía para toda la web */
+body {
+  margin: 0 auto;
+  min-height: 100vh;
+  font-size: 100%;
+  max-width: 1440px;
+  background: linear-gradient(135deg, #E2B0FF 10%, #9F44D3 100%);
+  font-family: Verdana;
+}
+
+/*
+<section class="program">
+        <h1 class="program__text">TO DO LIST</h1>
+        <div class="program__container-input">
+            <input class="program__input" type="text"  placeholder="Añadir tarea...">
+            <button class="program__btn-anadir">AÑADIR</button>
+        </div>
+        <div class="program__container-list">
+            <div class="program__tarea">
+                <p class="program__nombre-tarea">tarea prueba</p>
+                <div class="program__btndiv" >
+                    <button class="program__btn-editar"><i class="fa-solid fa-pencil"></i></button>
+                    <button class="program__btn-eliminar"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+*/
+.program {
+  margin: 100px auto;
+  width: 300x;
+  width: 500px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.program__text {
+  color: white;
+  font-size: 30px;
+  text-shadow: 5px 5px 0px rgb(240, 46, 170);
+}
+.program__container-input {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 90px;
+  margin: 50px 0 80px 0;
+  border-radius: 15px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px;
+}
+.program__input {
+  width: 60%;
+  outline: none;
+  border-bottom: 1px solid rgb(218, 212, 212);
+}
+.program__btn-anadir {
+  width: 20%;
+  background-color: pink;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size:12px ;
+}
+.program__container-list {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+.program__tarea {
+  width: 90%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+.program__nombre-tarea {
+  margin: 10px;
+}
+.program__btndiv {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.program__btn-editar {
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  background-color: greenyellow;
+  border-radius: 15px;
+}
+.program__btn-eliminar {
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  background-color: rgb(101, 49, 186);
+  border-radius: 15px;
+}/*# sourceMappingURL=styles.css.map */
